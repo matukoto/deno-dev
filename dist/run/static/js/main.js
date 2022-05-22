@@ -21113,15 +21113,11 @@ function App() {
         className: "App"
     }, react.createElement("header", {
         className: "App-header"
-    }, react.createElement("img", {
-        src: './static/images/logo.svg',
-        className: "App-logo",
-        alt: "logo"
-    }), react.createElement("p", null, "Edit ", react.createElement("code", null, "App.tsx"), " and save to reload."), react.createElement("a", {
-        className: "App-link",
-        href: "https://reactjs.org",
-        target: "_blank",
-        rel: "noopener noreferrer"
-    }, "Learn React"))));
+    }, react.createElement(LikeButton, null))));
+}
+function LikeButton() {
+    return react.createElement("span", {
+        className: "LikeButton"
+    }, "\u2661", 999);
 }
 mod1.render(react.createElement(rest.StrictMode, null, react.createElement(App, null)), document.getElementById('root'));
