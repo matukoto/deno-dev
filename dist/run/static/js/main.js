@@ -21116,8 +21116,13 @@ function App() {
     }, react.createElement(LikeButton, null))));
 }
 function LikeButton() {
+    const [count, setCount] = react.useState(999);
+    const handleClick = ()=>{
+        setCount(count + 1);
+    };
     return react.createElement("span", {
-        className: "LikeButton"
-    }, "\u2661", 999);
+        className: "likeButton",
+        onClick: handleClick
+    }, "\u2661 ", count);
 }
 mod1.render(react.createElement(rest.StrictMode, null, react.createElement(App, null)), document.getElementById('root'));
